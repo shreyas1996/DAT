@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb://localhost:27017/DAT",
+    "jwtSecret": "asjdeoqwiej109382103u2lenwqle",
+    "privateSecret": "y6T7r8z9x0cVbNmLkJhGfDsAqPwOeRtY"
+  }
+  

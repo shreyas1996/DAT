@@ -1,0 +1,42 @@
+{
+  "name": "defi-backend",
+  "version": "1.0.0",
+  "description": "web3 decentralized asset tracker/manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:ganache": "./sripts/startGanacheAndRestore.sh",
+    "deploy": "cd ../asset-tracker && truffle compile && truffle migrate --reset",
+    "start:server": "node index.js",
+    "restore": "node ./web3/restoreAssets.js",
+    "start": "npm run deploy && npm run start:server",
+    "start:all": "npm run start:ganache & sleep 5 && npm run deploy && npm run restore && npm run start:server"
+  },
+  "keywords": [
+    "web3",
+    "blockchain",
+    "ethereum",
+    "decentralized",
+    "smart",
+    "contracts",
+    "node.js",
+    "server",
+    "backend"
+  ],
+  "author": "Shreyas",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/contract": "^4.3.0",
+    "bcryptjs": "^2.4.3",
+    "bip39": "^3.1.0",
+    "config": "^3.3.11",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "ethereumjs-wallet": "^1.0.2",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "web3": "^1.6.0"
+  }
+}
